@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D轮播图</title>
+    <style>
+        body {
+            background: palegoldenrod;
+        }
+        #stage {
+            perspective: 1000px;
+        }
+        #content {
+            width: 100%;
+            margin: 70px auto;
+            height: 500px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+        img:nth-child(1) { transform: rotateY(0deg )translateZ(420px);}
+        img:nth-child(2) { transform: rotateY(60deg )translateZ(420px)}
+        img:nth-child(3) { transform: rotateY(120deg )translateZ(420px)}
+        img:nth-child(4) { transform: rotateY(180deg )translateZ(420px)}
+        img:nth-child(5) { transform: rotateY(240deg )translateZ(420px)}
+        img:nth-child(6) { transform: rotateY(300deg )translateZ(420px)}
+    </style>
+    <script>
+        window.onload = function (){
+            var content = document.getElementById("content");
+            var deg = 0;
+            content.onclick = function(){
+                deg = deg +60;
+                content.style.transform = "rotateY("+deg+"deg)";
+                content.style.transition = "5s ease"
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="stage">
+    <div id="content">
+        <img src="img/1.jpg" alt=""/>
+        <img src="img/2.jpg" alt=""/>
+        <img src="img/3.jpg" alt=""/>
+        <img src="img/4.jpg" alt=""/>
+        <img src="img/5.jpg" alt=""/>
+        <img src="img/6.jpg" alt=""/>
+    </div>
+</div>
+</body>
+</html>
