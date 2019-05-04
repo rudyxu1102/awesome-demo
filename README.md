@@ -1,6 +1,6 @@
 ## demo预览链接
 ### 3D轮播图
-> https://fatdong1.github.io/awesome-demo/3D轮播图/index.html
+> https://fatdong1.github.io/awesome-demo/3d-banner/index.html
 ### 两种方式实现复选框checkbox
 > https://fatdong1.github.io/awesome-demo/checkbox/index.html
 ### canvas
