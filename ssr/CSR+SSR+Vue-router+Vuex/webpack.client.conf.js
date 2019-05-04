@@ -5,7 +5,7 @@ const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
 
 module.exports = merge(base, {
    entry: {
-       client: './entry-client.js'
+        clientBundle: './entry-client.js'
    },
     plugins: [
         new VueSSRClientPlugin()

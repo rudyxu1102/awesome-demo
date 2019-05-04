@@ -18,7 +18,7 @@ export default function createStore() {
     return new Vuex.Store({
         state: {
             bar: '',
-            foo: ''
+            foo: '',
         },
         actions: {
             fetchBar({commit}) {

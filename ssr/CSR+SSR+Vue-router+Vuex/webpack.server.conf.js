@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const base = require('./webpack.base.conf.js');
+const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 
 module.exports = merge(base, {
     target: 'node',
@@ -11,6 +12,6 @@ module.exports = merge(base, {
         libraryTarget: 'commonjs2'
     },
     plugins: [
-
+        new VueSSRServerPlugin()
     ]
 });

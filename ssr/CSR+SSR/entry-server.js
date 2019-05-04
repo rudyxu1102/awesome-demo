@@ -1,4 +1,10 @@
-const createApp = require('./main.js');
+import Vue from 'vue'
+import App from './App.vue'
 
-
-module.exports = createApp;
+export default function (context) {
+    console.log(context.url)
+    const app = new Vue({
+        render: h => h(App)
+    });
+    return app;
+};

@@ -1,9 +1,6 @@
 <template>
     <div @click="trigger" id="app">
-        <h1>hello world</h1>
-        <hr>
-        <foo ref="foo_ref"></foo>
-        <bar ref="bar_ref"></bar>
+        <router-view></router-view>
     </div>
 </template>
 <style>
@@ -12,9 +9,6 @@
     }
 </style>
 <script>
-    import Foo from './components/Foo.vue';
-    import Bar from './components/Bar.vue';
-
     export default {
         data(){
             return {
@@ -39,10 +33,6 @@
             trigger() {
               console.log('触发点击事件');
             }
-        },
-        components: {
-            foo: Foo,
-            bar: Bar,
         }
     }
 </script>
