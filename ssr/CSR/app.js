@@ -7,3 +7,5 @@ var app = new Vue({
         App
     }
 });
+
+app.$mount('#app');

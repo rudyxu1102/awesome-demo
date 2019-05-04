@@ -6,7 +6,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'client.js'
+        filename: 'clientBundle.js'
     },
     module: {
         rules: [{
