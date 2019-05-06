@@ -1,7 +1,8 @@
 <template>
     <div class='foo'>
         <h1>Foo</h1>
-        <p>ajax数据：{{foo}} </p>
+        <p>ajax数据： </p>
+        <div v-for="item in foo" :key="item.id">{{item}}</div>
     </div>
 </template>
 <style>

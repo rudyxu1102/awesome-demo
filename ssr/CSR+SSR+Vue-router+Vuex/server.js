@@ -6,6 +6,7 @@ server.use(express.static('dist'));
 
 const bundle = require(path.resolve(__dirname, 'dist/vue-ssr-server-bundle.json'));
 
+// 将打包后的entry-server.js渲染成html文件，再把打包后的entry-client.js混合进html中
 const renderer = require('vue-server-renderer').createBundleRenderer(bundle, {
     template: fs.readFileSync(path.resolve(__dirname, 'index.ssr.html'), 'utf-8'),
     clientManifest: require(path.resolve(__dirname, 'dist/vue-ssr-client-manifest.json')),

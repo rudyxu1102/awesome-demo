@@ -20,5 +20,8 @@
     "vue-server-renderer": "^2.5.13",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
   }
 }

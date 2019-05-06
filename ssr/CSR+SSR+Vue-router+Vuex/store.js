@@ -1,42 +1,29 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
+import axios from 'axios'
 Vue.use(Vuex);
 
-function fetchBar() {
-    return new Promise(function (resolve, reject) {
-        resolve('bar ajax 返回数据');
-    });
+function fetchFoo() {
+    return axios.get('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => {
+      return { posts: res.data.slice(0, 5) }
+    })
 }
 
-function fetchFoo() {
-    return new Promise(function (resolve, reject) {
-        resolve('foo ajax 返回数据');
-    });
-}
 export default function createStore() {
     return new Vuex.Store({
         state: {
-            bar: '',
             foo: '',
         },
         actions: {
-            fetchBar({commit}) {
-                return fetchBar().then(msg => {
-                    commit('setBar', {msg})
-                })
-            },
             fetchFoo({commit}) {
-                return fetchFoo().then(msg => {
-                    commit('setFoo', {msg})
+                return fetchFoo().then(res => {
+                    commit('setFoo', res.posts)
                 })
             }
         },
         mutations:{
-            setBar(state, {msg}) {
-                Vue.set(state, 'bar', msg);
-            },
-            setFoo(state, {msg}) {
+            setFoo(state, msg) {
                 Vue.set(state, 'foo', msg);
             }
         }
