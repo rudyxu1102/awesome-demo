@@ -1,0 +1,27 @@
+{
+  "name": "awesome-demo",
+  "version": "1.0.0",
+  "description": "> https://fatdong1.github.io/awesome-demo/3d-banner/index.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jshint": "jshint ./canvas/particle/particle.js",
+    "eslint": "eslint ./canvas/particle/particle.js",
+    "init": "eslint --init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FatDong1/awesome-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FatDong1/awesome-demo/issues"
+  },
+  "homepage": "https://github.com/FatDong1/awesome-demo#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "jshint": "^2.10.2"
+  }
+}
